@@ -1,0 +1,11 @@
+
+{
+    "browser":"chrome",
+    "engineBrowser":"./browserEngine/chromedriver.exe",
+    "search_url":"https://www.yandex.com/images",
+    "search_input_class":"text",
+    "result_img_class":"img.serp-item__thumb",
+    "search_filter_image_btn_class":["MUFPAc","a"],
+    "search_delay": 3.2,
+    "IMAGE_BASE_FOLDER": "./images"
+}
