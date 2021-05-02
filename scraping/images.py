@@ -1,7 +1,5 @@
 from os import makedirs, path, walk
-import base64
-import requests
-
+import fs
 
 
 def saveImage(img_src,name, dirs):
@@ -16,19 +14,9 @@ def saveImage(img_src,name, dirs):
         lastFile = files[-1].split('.')
         newFileName = int(lastFile[0]) + 1
         nameImg = str(newFileName).zfill(4)
-        print(nameImg)
-
+        # print(nameImg)
     if 'https://' in img_src:
-
-        response = requests.get(f"{img_src}")
-        save_img = open(f'{dirs}/{name}/{nameImg}.jpeg', 'wb')
-        save_img.write(response.content)
-        save_img.close()
+        fs.saveLinkImg(img_src, dirs, name, nameImg)
 
     else:
-        img = img_src.split(',')
-        img_b = bytes(img[1],encoding='utf8')
-        save_img = open(f'{dirs}/{name}/{nameImg}.jpeg', 'wb')
-        save_img.write(base64.decodebytes(img_b))
-        save_img.close()
-
+        fs.saveBytesImg(img_src, dirs, name, nameImg)

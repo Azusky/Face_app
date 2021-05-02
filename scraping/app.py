@@ -2,7 +2,12 @@ from fs import loadConfig
 from se import searchImagesForName
 
 
-settings = loadConfig('settings')
+settingsY = loadConfig('settingsY')
+settingsG = loadConfig('settingsG')
+
+names = ['Jessica', 'Kyra', 'Tanya', 'Nastya']
 
 
-searchImagesForName(name='Mary', settings= settings)
+searchImagesForName(names=names, settings=settingsY)
+
+searchImagesForName(names=names, settings=settingsG)
