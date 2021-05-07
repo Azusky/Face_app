@@ -6,6 +6,6 @@
     "search_input_class":"q",
     "result_img_class":"img.rg_i",
     "search_filter_image_btn_class":["MUFPAc","a"],
-    "search_delay": 3.2,
-    "IMAGE_BASE_FOLDER": "./images"
+    "search_delay": 1.5,
+    "IMAGE_BASE_FOLDER": "./original_images"
 }
