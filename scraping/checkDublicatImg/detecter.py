@@ -1,6 +1,6 @@
 import os
 from PIL import Image, ImageStat
-import numpy as np
+
 image_folder = 'images'
 image_files = [_ for _ in os.listdir(image_folder) if _.endswith('jpeg')]
 
